@@ -1,0 +1,9 @@
+Module
+  name: game_healthinfo
+  description: Displays attack stat, attack speed, magic attack, cast speed, critical chance, critical damage, dodge, defence stat, magic defence, hit stat.
+  author: Sempervirens
+  website: http://www.puto-el-que-lo-lea.com
+  sandboxed: true
+  scripts: [  ]
+  @onLoad: init()
+  @onUnload: terminate()

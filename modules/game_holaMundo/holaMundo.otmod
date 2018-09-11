@@ -1,0 +1,9 @@
+Module
+  name: game_holaMundo
+  description: Nuestro primer modulo.
+  author: Nyunya y Sempervirens
+  website: www.pene.com
+  sandboxed: true
+  scripts: [ holaMundo.lua ]
+  @onLoad: init()
+  @onUnload: terminate()
