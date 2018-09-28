@@ -379,6 +379,16 @@ void LocalPlayer::setMytheosStatPrimary(Otc::MytheosStatPrimary stat, int level,
 	}
 }
 
+//Mytheos
+void LocalPlayer::increaseMytheosStatPrimaryValue(Otc::MytheosStatPrimary stat)
+{
+	if (stat >= Otc::LastMytheosStatPrimary) {
+		g_logger.traceError("invalid mytheos stat");
+		return;
+	}
+	m_mytheosStatsPrimaryLevel[stat]++;
+}
+
 void LocalPlayer::setHealth(double health, double maxHealth)
 {
     if(m_health != health || m_maxHealth != maxHealth) {

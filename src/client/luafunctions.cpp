@@ -659,6 +659,11 @@ void Client::registerLuaFunctions()
     g_lua.bindClassMemberFunction<LocalPlayer>("isServerWalking", &LocalPlayer::isServerWalking);
     g_lua.bindClassMemberFunction<LocalPlayer>("stopAutoWalk", &LocalPlayer::stopAutoWalk);
     g_lua.bindClassMemberFunction<LocalPlayer>("autoWalk", &LocalPlayer::autoWalk);
+	// Mytheos
+	g_lua.bindClassMemberFunction<LocalPlayer>("getMytheosStatValue", &LocalPlayer::getMytheosStatValue);
+	g_lua.bindClassMemberFunction<LocalPlayer>("getMytheosStatMultiplier", &LocalPlayer::getMytheosStatMultiplier);
+	g_lua.bindClassMemberFunction<LocalPlayer>("setMytheosStatPrimary", &LocalPlayer::setMytheosStatPrimary);
+	g_lua.bindClassMemberFunction<LocalPlayer>("increaseMytheosStatPrimaryValue", &LocalPlayer::increaseMytheosStatPrimaryValue);
 
     g_lua.registerClass<Tile>();
     g_lua.bindClassMemberFunction<Tile>("clean", &Tile::clean);

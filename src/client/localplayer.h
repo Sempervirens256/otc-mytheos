@@ -44,8 +44,6 @@ public:
     void setStates(int states);
     void setSkill(Otc::Skill skill, int level, int levelPercent);
     void setBaseSkill(Otc::Skill skill, int baseLevel);
-	// Mytheos
-	void setMytheosStatPrimary(Otc::MytheosStatPrimary stat, int level, int multiplier);
     void setHealth(double health, double maxHealth);
     void setFreeCapacity(double freeCapacity);
     void setTotalCapacity(double totalCapacity);
@@ -65,6 +63,9 @@ public:
     void setOfflineTrainingTime(double offlineTrainingTime);
     void setSpells(const std::vector<int>& spells);
     void setBlessings(int blessings);
+	// Mytheos
+	void setMytheosStatPrimary(Otc::MytheosStatPrimary stat, int level, int multiplier);
+	void increaseMytheosStatPrimaryValue(Otc::MytheosStatPrimary stat);
 
     int getStates() { return m_states; }
     int getSkillLevel(Otc::Skill skill) { return m_skillsLevel[skill]; }
@@ -90,6 +91,9 @@ public:
     std::vector<int> getSpells() { return m_spells; }
     ItemPtr getInventoryItem(Otc::InventorySlot inventory) { return m_inventoryItems[inventory]; }
     int getBlessings() { return m_blessings; }
+	//Mytheos
+	int getMytheosStatValue(int stat) { return m_mytheosStatsPrimaryLevel[stat]; }
+	int getMytheosStatMultiplier(int stat) { return m_mytheosStatsPrimaryMultiplier[stat]; }
 
     bool hasSight(const Position& pos);
     bool isKnown() { return m_known; }

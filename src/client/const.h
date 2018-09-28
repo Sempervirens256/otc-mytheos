@@ -158,6 +158,7 @@ namespace Otc
         LastSkill
     };
 
+	// Mytheos
 	enum MytheosStatPrimary {
 		Strength = 0,
 		Vitality,
