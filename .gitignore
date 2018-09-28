@@ -97,6 +97,9 @@ ipch/
 *.sdf
 *.cachefile
 
+# Carpeta .vs que no se que mierda.
+.vs/
+
 # Visual Studio profiler
 *.psess
 *.vsp
